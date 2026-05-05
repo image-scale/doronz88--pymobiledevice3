@@ -1,6 +1,6 @@
 """Protocol constants for DTX communication."""
 
-from enum import IntFlag
+from enum import IntEnum, IntFlag
 
 
 # Maximum byte size of any single assembled message (128 MiB)
@@ -23,3 +23,16 @@ class TransportFlags(IntFlag):
     """Bit flags in the chunk header flags field."""
     NONE = 0
     EXPECTS_REPLY = 1 << 0
+
+
+class MessageType(IntEnum):
+    """Message type codes used in the DTX payload header."""
+    OK = 0           # Acknowledgment response with no payload
+    DATA = 1         # Raw data transfer
+    DISPATCH = 2     # Method invocation (selector call)
+    OBJECT = 3       # Archived object payload
+    ERROR = 4        # Error response with NSError payload
+    BARRIER = 5      # Synchronization barrier
+    PRIMITIVE = 6    # Primitive value
+    COMPRESSED = 7   # Compressed payload
+    PROXIED = 8      # Proxied message
