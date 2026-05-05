@@ -40,3 +40,28 @@
 **Commit**: Add primitive wire types and auxiliary argument encoding for DTX method dispatch
 **Acceptance**: 12/12 criteria met
 **Verification**: tests FAIL on previous state (ModuleNotFoundError), PASS on current state
+
+## Round 4
+**Task**: Task 4 - Implement DTX sender mixin for outgoing message handling
+**Files created**:
+- iosdevice/protocol/message.py
+- iosdevice/protocol/sender.py
+- tests/protocol/test_message.py
+**Files modified**:
+- iosdevice/protocol/__init__.py (exported Message and MessageSender)
+**Commit**: Add DTX message representation and sender for method dispatch and reply handling
+**Acceptance**: 12/12 criteria met
+**Verification**: tests FAIL on previous state (ModuleNotFoundError), PASS on current state
+
+## Round 5
+**Task**: Task 5 - Implement USBMux connection for device enumeration and connection
+**Files created**:
+- iosdevice/usbmux/__init__.py
+- iosdevice/usbmux/exceptions.py
+- iosdevice/usbmux/device.py
+- iosdevice/usbmux/connection.py
+- tests/usbmux/__init__.py
+- tests/usbmux/test_usbmux.py
+**Commit**: Add USBMux device enumeration and connection multiplexing
+**Acceptance**: 8/8 criteria met
+**Verification**: tests FAIL on previous state (ModuleNotFoundError), PASS on current state

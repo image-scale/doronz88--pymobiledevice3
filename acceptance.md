@@ -53,15 +53,27 @@
 ## Task 4: DTX Sender Mixin
 
 ### Acceptance Criteria
-- [ ] Message dataclass with type, identifier, conversation_index, channel_code, flags, aux_data, payload_data
-- [ ] Message.chunks() returns wire format header + aux + payload
-- [ ] Message validates that OK messages have no payload
-- [ ] Message validates that ERROR messages have payload and no aux
-- [ ] Message validates that replies have type OK, OBJECT, or ERROR
-- [ ] Sender tracks pending replies by message identifier
-- [ ] Sender assigns unique message identifiers to outgoing messages
-- [ ] send_dispatch() sends DISPATCH message with method name as payload and args as aux
-- [ ] send_notification() sends OBJECT message with payload
-- [ ] send_reply() sends OBJECT reply with payload
-- [ ] send_reply_ack() sends OK reply with no payload
-- [ ] send_reply_error() sends ERROR reply with NSError payload
+- [x] Message dataclass with type, identifier, conversation_index, channel_code, flags, aux_data, payload_data
+- [x] Message.chunks() returns wire format header + aux + payload
+- [x] Message validates that OK messages have no payload
+- [x] Message validates that ERROR messages have payload and no aux
+- [x] Message validates that replies have type OK, OBJECT, or ERROR
+- [x] Sender tracks pending replies by message identifier
+- [x] Sender assigns unique message identifiers to outgoing messages
+- [x] send_dispatch() creates DISPATCH message with method name as payload and args as aux
+- [x] send_notification() creates OBJECT message with payload
+- [x] send_reply() creates OBJECT reply with payload
+- [x] send_reply_ack() creates OK reply with no payload
+- [x] send_reply_error() creates ERROR reply with NSError payload
+
+## Task 5: USBMux Connection
+
+### Acceptance Criteria
+- [ ] MuxDevice represents a connected device with UDID, connection type, and serial number
+- [ ] MuxConnection base class for usbmuxd socket communication
+- [ ] Plist protocol support for sending and receiving plist messages
+- [ ] list_devices() returns all currently connected devices
+- [ ] connect() establishes a connection to a device port
+- [ ] Device enumeration through usbmuxd daemon
+- [ ] Support for both USB and network connection types
+- [ ] Proper socket cleanup and error handling
