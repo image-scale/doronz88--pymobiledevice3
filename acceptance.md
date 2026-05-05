@@ -37,15 +37,31 @@
 ## Task 3: DTX Primitive Types and Message Aux
 
 ### Acceptance Criteria
-- [ ] Primitive type base class with type code and serialization interface
-- [ ] PrimitiveNull (type code 10) as positional marker, serializes as just type tag
-- [ ] PrimitiveString (type code 1) for UTF-8 strings with length prefix
-- [ ] PrimitiveBuffer (type code 2) for raw bytes with length prefix
-- [ ] PrimitiveInt32 (type code 3) for 32-bit signed integers
-- [ ] PrimitiveInt64 (type code 6) for 64-bit signed integers
-- [ ] PrimitiveDouble (type code 9) for IEEE-754 double values
-- [ ] PrimitiveDictionary (type code 0xF0) for key-value pairs with body length header
-- [ ] MessageAux parser extracts list of arguments from primitive dictionary
-- [ ] MessageAux builder encodes argument list into wire format
-- [ ] Non-primitive arguments archived using NSKeyedArchive into PrimitiveBuffer
-- [ ] Empty argument list produces empty bytes (no output)
+- [x] Primitive type base class with type code and serialization interface
+- [x] PrimitiveNull (type code 10) as positional marker, serializes as just type tag
+- [x] PrimitiveString (type code 1) for UTF-8 strings with length prefix
+- [x] PrimitiveBuffer (type code 2) for raw bytes with length prefix
+- [x] PrimitiveInt32 (type code 3) for 32-bit signed integers
+- [x] PrimitiveInt64 (type code 6) for 64-bit signed integers
+- [x] PrimitiveDouble (type code 9) for IEEE-754 double values
+- [x] PrimitiveDictionary (type code 0xF0) for key-value pairs with body length header
+- [x] MessageAux parser extracts list of arguments from primitive dictionary
+- [x] MessageAux builder encodes argument list into wire format
+- [x] Non-primitive arguments archived using NSKeyedArchive into PrimitiveBuffer
+- [x] Empty argument list produces empty bytes (no output)
+
+## Task 4: DTX Sender Mixin
+
+### Acceptance Criteria
+- [ ] Message dataclass with type, identifier, conversation_index, channel_code, flags, aux_data, payload_data
+- [ ] Message.chunks() returns wire format header + aux + payload
+- [ ] Message validates that OK messages have no payload
+- [ ] Message validates that ERROR messages have payload and no aux
+- [ ] Message validates that replies have type OK, OBJECT, or ERROR
+- [ ] Sender tracks pending replies by message identifier
+- [ ] Sender assigns unique message identifiers to outgoing messages
+- [ ] send_dispatch() sends DISPATCH message with method name as payload and args as aux
+- [ ] send_notification() sends OBJECT message with payload
+- [ ] send_reply() sends OBJECT reply with payload
+- [ ] send_reply_ack() sends OK reply with no payload
+- [ ] send_reply_error() sends ERROR reply with NSError payload

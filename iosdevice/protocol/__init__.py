@@ -34,6 +34,8 @@ from .primitives import (
     WireDict,
 )
 from .message_aux import AuxData
+from .message import Message
+from .sender import MessageSender
 
 __all__ = [
     # Exceptions
@@ -70,4 +72,7 @@ __all__ = [
     "WireDict",
     # Aux Data
     "AuxData",
+    # Message and Sender
+    "Message",
+    "MessageSender",
 ]

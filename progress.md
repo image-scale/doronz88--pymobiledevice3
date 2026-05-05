@@ -28,3 +28,15 @@
 **Commit**: Add message type enumeration and Objective-C type wrappers for NSKeyedArchive serialization
 **Acceptance**: 10/10 criteria met
 **Verification**: tests FAIL on previous state (ModuleNotFoundError), PASS on current state
+
+## Round 3
+**Task**: Task 3 - Implement DTX primitive types and message aux for auxiliary argument encoding
+**Files created**:
+- iosdevice/protocol/primitives.py
+- iosdevice/protocol/message_aux.py
+- tests/protocol/test_primitives.py
+**Files modified**:
+- iosdevice/protocol/__init__.py (exported primitives and AuxData)
+**Commit**: Add primitive wire types and auxiliary argument encoding for DTX method dispatch
+**Acceptance**: 12/12 criteria met
+**Verification**: tests FAIL on previous state (ModuleNotFoundError), PASS on current state
