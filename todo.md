@@ -9,6 +9,6 @@ Start by implementing the DTX protocol layer since it has comprehensive tests an
 - [x] Task 3: Implement DTX primitive types and message aux for auxiliary argument encoding (primitive dictionary wire format with type codes for null, string, buffer, int32, int64, double)
 - [x] Task 4: Implement DTX sender mixin for outgoing message handling (send reply, notification, dispatch methods with proper message type handling)
 - [x] Task 5: Implement USBMux connection for device enumeration and connection (PlistMuxConnection for modern protocol, device state tracking, connect/listen operations)
-- [>] Task 6: Implement ServiceConnection for TCP/TLS communication with device services (plist send/recv, SSL upgrade, socket management)
-- [ ] Task 7: Implement OS utilities for cross-platform support (Windows/Linux/macOS socket keepalive, usbmux address resolution)
+- [x] Task 6: Implement ServiceConnection for TCP/TLS communication with device services (plist send/recv, SSL upgrade, socket management)
+- [>] Task 7: Implement OS utilities for cross-platform support (Windows/Linux/macOS socket keepalive, usbmux address resolution)
 - [ ] Task 8: Implement CLI syslog module with live streaming and filtering capabilities (message filtering, output formatting, process name matching)

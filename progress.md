@@ -65,3 +65,15 @@
 **Commit**: Add USBMux device enumeration and connection multiplexing
 **Acceptance**: 8/8 criteria met
 **Verification**: tests FAIL on previous state (ModuleNotFoundError), PASS on current state
+
+## Round 6
+**Task**: Task 6 - Implement ServiceConnection for TCP/TLS communication
+**Files created**:
+- iosdevice/service/__init__.py
+- iosdevice/service/exceptions.py
+- iosdevice/service/connection.py
+- tests/service/__init__.py
+- tests/service/test_connection.py
+**Commit**: Add TCP/TLS service connection with plist protocol support
+**Acceptance**: 10/10 criteria met
+**Verification**: tests FAIL on previous state (ModuleNotFoundError), PASS on current state
