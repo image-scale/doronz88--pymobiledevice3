@@ -1,0 +1,21 @@
+[project]
+name = "iosdevice"
+description = "Pure Python 3 implementation for working with iOS devices"
+version = "0.1.0"
+requires-python = ">=3.9"
+readme = "goal.md"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-asyncio"]
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
