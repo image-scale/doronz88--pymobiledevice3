@@ -88,3 +88,14 @@
 **Commit**: Add cross-platform OS utilities for device communication
 **Acceptance**: 8/8 criteria met
 **Verification**: tests FAIL on previous state (ModuleNotFoundError), PASS on current state
+
+## Round 8
+**Task**: Task 8 - Implement CLI syslog module with live streaming and filtering
+**Files created**:
+- iosdevice/cli/__init__.py
+- iosdevice/cli/syslog.py
+- tests/cli/__init__.py
+- tests/cli/test_syslog.py
+**Commit**: Add syslog entry filtering and formatting for CLI display
+**Acceptance**: 10/10 criteria met
+**Verification**: tests FAIL on previous state (ModuleNotFoundError), PASS on current state
